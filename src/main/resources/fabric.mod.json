@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "no-offhand-placing",
+	"version": "${version}",
+	"name": "No Offhand Placing",
+	"description": "Makes the offhand placing toggleable",
+	"authors": [
+		"Bikerboys"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/no-offhand-placing/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"bikerboys.nop.NoOffhandPlacing"
+		],
+		"client": [
+			"bikerboys.nop.NoOffhandPlacingClient"
+		]
+	},
+	"mixins": [
+		"no-offhand-placing.mixins.json",
+		{
+			"config": "no-offhand-placing.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "*",
+		"java": "*",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
