@@ -22,7 +22,8 @@ public class NoOffhandPlacingClient implements ClientModInitializer {
 			GLFW.GLFW_KEY_Y, 
 			new KeyBinding.Category(Identifier.of(MOD_ID, "disable_offhand"))
 		)
-	);	public static boolean enabled = false;
+	);	
+	public static boolean enabled = false;
 
 	@Override
 	public void onInitializeClient() {
