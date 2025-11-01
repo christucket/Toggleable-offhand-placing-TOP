@@ -31,7 +31,7 @@ public abstract class ExampleClientMixin {
 
 	@Inject(method = "interactBlock", at = @At(value = "HEAD"), cancellable = true)
 	private void method(ClientPlayerEntity player, Hand hand, BlockHitResult hitResult, CallbackInfoReturnable<ActionResult> cir){
-		if (hand == Hand.OFF_HAND && NoOffhandPlacingClient.enabeled) {
+		if (hand == Hand.OFF_HAND && NoOffhandPlacingClient.enabled) {
 			// Return a custom result without executing the rest of the method.
 			cir.setReturnValue(ActionResult.FAIL);
 		}
